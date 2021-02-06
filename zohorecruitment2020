@@ -1,21 +1,28 @@
-import java.util.*;
-public class Main{
- 
-     public static void main(String []args){
-       Scanner sc=new Scanner(System.in);
-       int f,i,j;
-       System.out.println("Enter number of inputs");
-       f=sc.nextInt();
-     
-       for(i=f;i>=1;i--)
-       {
-           for(j=f;j>=1;j--)
-           {
-               System.out.print(i>j?i:j);
-           }
-           System.out.println();
-       }
-     
-     
-     }
+#include <stdio.h>
+
+int main()
+{
+    int m, i, j;
+
+   
+    printf("Enter number of input: ");
+    scanf("%d", &m);
+   
+
+    for(i=1; i<=m; i++)
+    {
+        for(j=m; j>m-i; j--)
+        {
+            printf("%d", j);
+        }
+
+        for(j=1; j<=m-i; j++)
+        {
+            printf("%d", (m - i + 1));
+        }
+
+        printf("\n");
+    }
+
+    return 0;
 }
